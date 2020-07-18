@@ -12,8 +12,8 @@ func Distance(a, b string) (int, error) {
 	}
 
 	var distance int
-	for idx, _ := range a{
-		if (a[idx] != b[idx]){
+	for idx, _ := range a {
+		if a[idx] != b[idx] {
 			distance++
 		}
 	}
