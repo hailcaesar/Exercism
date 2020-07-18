@@ -5,7 +5,7 @@ using namespace std;
 namespace hello_world {
 
     string hello() {
-        return "Fix me";
+        return "Hello, World!";
     }
 
 }
