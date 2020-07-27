@@ -31,6 +31,7 @@ var scores = map[rune]int{
 	'Z': 10,
 }
 
+//Score function calculates the scrabble score of a particular string
 func Score(input string) int {
 	input = strings.ToUpper(input)
 	var score int
