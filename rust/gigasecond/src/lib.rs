@@ -1,8 +1,8 @@
 use chrono::{DateTime, Duration, Utc};
 
-const GS: i64 = 1_000_000_000;
+const GIGASECONDS: i64 = 1_000_000_000;
 
 // Returns a Utc DateTime one billion seconds after start.
 pub fn after(start: DateTime<Utc>) -> DateTime<Utc> {
-    return start + Duration::seconds(GS)
+    start + Duration::seconds(GIGASECONDS)
 }
