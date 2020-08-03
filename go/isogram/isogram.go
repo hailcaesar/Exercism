@@ -8,11 +8,11 @@ func IsIsogram(input string) bool {
 	seen := make(map[rune]bool)
 
 	for _, ch := range input {
-		if ch != ' ' && ch != '-' && seen[ch] {
+		if seen[ch] && ch != ' ' && ch != '-' {
 			return false
-		} else {
-			seen[ch] = true
 		}
+
+		seen[ch] = true
 	}
 
 	return true
