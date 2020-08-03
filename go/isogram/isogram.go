@@ -5,17 +5,15 @@ import "strings"
 //IsIsogram determines if input string is an isogram
 func IsIsogram(input string) bool {
 	input = strings.ToLower(input)
-	counter := make(map[rune]int)
-	ans := true
+	seen := make(map[rune]bool)
 
 	for _, ch := range input {
-		if ch != ' ' && ch != '-' && counter[ch] > 0 {
-			ans = false
-			break
+		if ch != ' ' && ch != '-' && seen[ch] {
+			return false
 		} else {
-			counter[ch]++
+			seen[ch] = true
 		}
 	}
 
-	return ans
+	return true
 }
