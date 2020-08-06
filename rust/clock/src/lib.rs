@@ -1,6 +1,4 @@
 use std::fmt;
-extern crate num_integer;
-use num_integer::Integer;
 
 #[derive(Debug, PartialEq)]
 pub struct Clock {
@@ -13,8 +11,8 @@ impl Clock {
         Clock {
             //Compared to regular '/' and '%',
             //div_floor and mod_floor handle negative numbers 
-            hours: (hours * 60 + minutes).div_floor(&60).mod_floor(&24),
-            minutes: minutes.mod_floor(&60),
+            hours: (hours * 60 + minutes).div_euclid(60).rem_euclid(24),
+            minutes: minutes.rem_euclid(60),
         }
     }
 
